@@ -1,0 +1,158 @@
+@font-face {
+    font-family: calculadora;
+    src: url(./fonte/digital-7\ \(mono\ italic\).ttf);
+}
+body{
+    font-family: sans-serif;
+    text-align: center;
+    background-image: url(./fundo.png);
+}
+h1{
+    font-family: 'Raleway', cursive;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #494848ce;
+    text-shadow: #fff 0 0 10px;
+    padding: 13px;
+    border-bottom: 2px solid rgb(172, 172, 171);
+    box-shadow: 0 5px 5px rgb(172, 172, 171);
+}
+p{
+    color: rgb(78, 78, 78);
+}
+#visor{
+    font-family: calculadora;
+    font-size: 35px;
+    width: 165px;
+    height: 35px;
+    display: grid;
+    grid-template-columns: 20% 85%;
+    margin: 10px auto;
+    padding: 7px;
+    background:linear-gradient(#ccc, rgb(233, 233, 233));
+    border: 2px solid rgb(235, 234, 234) ;
+    border-radius: 3px;
+    box-shadow: -1px -1px 0 1px white;
+    
+}
+#dots{
+    display: none;
+}
+#painel{
+    width: 135px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#calculadora{
+    width: 202px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(190, 190, 190);
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(179, 177, 177) ;
+    box-shadow: 5px 8px 5px rgb(172, 172, 171);
+}
+#dots:hover{
+    display: none;
+    position: relative;
+}
+#painel:hover{
+    overflow: visible;
+    position: absolute;
+}
+.buttonArea{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(5, 40px);
+    grid-gap: 5px;
+    padding: 15px;
+}
+button{
+    font-size: 17px;
+}
+button:active{
+    color: white;
+    background: rgb(175, 175, 175);
+}
+.botao:nth-last-child(2){
+    grid-column: 4;
+    grid-row: 4 / 6;
+    border: 1px solid rgb(179, 177, 177) ;
+    box-shadow: -1px -1px 2px 1px rgb(238, 237, 237);
+    background: #ccc;
+}
+.botao:nth-last-child(3){
+    grid-column: span 2;
+    border: 1px solid rgb(179, 177, 177) ;
+    box-shadow: -1px -1px 2px 1px rgb(238, 237, 237);
+    background: #ccc;
+}
+.botao:nth-last-child(2):active, .botao:nth-last-child(3):active{
+    color: white;
+    background: rgb(136, 136, 136);
+}
+
+/* tablet */
+@media (max-width: 801px){
+    h1{
+        font-size: 55px;
+    }
+    #calculadora{
+        width: 475px;
+    }
+    #visor{
+        margin-top: 20px;
+        width: 430px;
+        height: 90px;
+        font-size: 95px;
+    }
+    #painel{
+        width: 335px;
+    }
+    .buttonArea{
+        display: grid;
+        grid-template-columns: repeat(4, 95px);
+        grid-template-rows: repeat(5, 95px);
+        grid-gap: 20px;
+        padding: 15px;
+    }
+    button{
+        font-size: 30px;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px){
+    body{
+        background-size: 150%;
+    }
+    h1{
+        font-size: 40px;
+    }
+    #calculadora{
+        width: 300px;
+    }
+    #visor{
+        font-size: 65px;
+        width: 250px;
+        height: 60px;
+    }
+    #painel{
+        width: 195px;
+    }
+    .buttonArea{
+        display: grid;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(5, 60px);
+        grid-gap: 10px;
+        padding: 15px;
+    }
+    button{
+        font-size: 25px;
+    }
+}
+
